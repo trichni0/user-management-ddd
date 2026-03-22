@@ -7,3 +7,14 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: YOUR_CLIENT_ID
+            client-secret: YOUR_CLIENT_SECRET
+            scope:
+              - user:email
