@@ -6,7 +6,7 @@ import com.example.usermanagement.domain.valueobject.*;
 
 import java.util.UUID;
 
-public class RegisterUserUseCase {
+public class RegisterUserUseCase implements RegisterUserUseCasePort {
 
     private final UserRepository repository;
 

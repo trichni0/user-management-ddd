@@ -1,3 +1,13 @@
 package com.example.usermanagement.interfaces.rest.dto;
 
-public record RegisterRequest(String email, String password) {}
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+
+public record RegisterRequest(
+        @NotBlank(message = "Email is required")
+        @Email(message = "Invalid email format")
+        String email,
+        
+        @NotBlank(message = "Password is required")
+        String password
+) {}
